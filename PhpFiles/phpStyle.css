@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: url("../images/orangeFlower.jpg");
+    background-repeat: no-repeat;
+    background-color: #f34f3f;
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  .marginLeft{
+    margin-left: 10px;
+  }
+  .card-header{
+    border: none;
+    text-align: center;
+    margin-top: 15px;
+  }
+.btn{
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color: #f34f3f;
+    color: white;
+    margin: 15px 10px 10px 0px;
+}
+h4{
+    color: #f34f3f;
+    font-weight: bold;
+}
+.fa-user-plus{
+    margin-right: 20px;
+}
+i{
+    color: #f34f3f;
+}
+.btn i{
+    color: white;
+}
+.card{
+    border: none;
+}
+.form {
+    width: 50%;
+    height: 1700px;
+    background-color: rgba(255,255,255,0.1); 
+    backdrop-filter: blur(10px);
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card2{
+    width: 80%;
+}
+.center_btn{
+    width: fit-content;
+    margin: auto;
+}
