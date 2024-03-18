@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="phpStyle.css">
+    <link rel="stylesheet" href="phpstyle.css">
     <title>Document</title>
 </head>
 <body>
 
 <div class="form">
-    <div class="container">
-        <div class="col-md-6 card2">
+
+        <div class=" card2">
             <div class="card">
                 <div class="card-header">
-                    <h4><i class="fas fa-user-plus"></i>Sign Up</h4>
+                    <h4>Sign Up</h4>
                 </div>
                 <div class="card-body">
                     <form method="post">
@@ -43,15 +43,13 @@
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                             </div>
                         </div>
-                        <div class="center_btn">
-                            <button type="submit" class="btn"><i class="fas fa-user-plus"></i> <span class="marginLeft">Sign up</span> </button>
-                            <button type="reset" class="btn"><i class="fa-solid fa-delete-left"></i><span class="marginLeft">Reset</span></button>
-                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3 mb-3" style="background-color:#f34f3f;border:none; width:100%" name="login">Sign UP</button>
+                        <p>already have an account? <a class="link" href="login.php">log in</a></p>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 
 <?php

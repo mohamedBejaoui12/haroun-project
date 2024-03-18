@@ -9,15 +9,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    background-image: url("../images/orangeFlower.jpg");
-    background-repeat: no-repeat;
-    background-color: #f34f3f;
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
+    width: 100%;
     display: flex; 
     justify-content: center;
     align-items: center;
+    background-color:#f34f3f ;
   }
   .marginLeft{
     margin-left: 10px;
@@ -38,30 +35,31 @@ body{
 h4{
     color: #f34f3f;
     font-weight: bold;
+    text-align: left;
+    font-size: 30px;
 }
 .fa-user-plus{
-    margin-right: 20px;
+    margin-right: 10px;
 }
-i{
-    color: #f34f3f;
-}
+
 .btn i{
     color: white;
 }
 .card{
     border: none;
 }
+.card2{
+    width: 70%;
+}
+
 .form {
-    width: 50%;
-    height: 1700px;
-    background-color: rgba(255,255,255,0.1); 
-    backdrop-filter: blur(10px);
-    display: flex;
+   width: 50%;
+display: flex;
 justify-content: center;
 align-items: center;
 }
 
-.container{
+/* .container{
     padding: 10px;
     width: 100%;
     display: flex;
@@ -70,8 +68,20 @@ align-items: center;
 }
 .card2{
     width: 80%;
-}
+}*/
 .center_btn{
     width: fit-content;
     margin: auto;
+} 
+
+.container {
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+
+
