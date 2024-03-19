@@ -1,7 +1,16 @@
 <?php
 include "connect.php";
+session_start();
 
-// Pagination variables
+if(empty($_SESSION['login'])){
+    header('location:login.php');
+}
+$userID= $_SESSION['id'];
+$sql2="SELECT * FROM user WHERE id=$userID";
+$stm=$con->prepare($sql2);
+$stm->execute();
+$userData=$stm->fetch();
+
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $limit = 9;
 $offset = ($page - 1) * $limit;
@@ -179,6 +188,9 @@ $total_pages = ceil($con->query("SELECT COUNT(*) FROM products")->fetchColumn() 
       .fa-magnifying-glass{
         margin: auto;
       }
+      .userName{
+            font-size: 18px;
+            text-transform: capitalize;}
     </style>
 </head>
 <body>
@@ -191,30 +203,26 @@ $total_pages = ceil($con->query("SELECT COUNT(*) FROM products")->fetchColumn() 
             </div>
         </div>
         <div class="col-md-10">
-            <div class="userName">Person's Name</div>
-            <div class="userEmail">person@gmail.com</div>
+            <div class="userName"><?php echo $userData['firstName']. " " . $userData['lastName'] ; ?></div>
         </div>
     </div>
 </div>
 <hr>
-        <ul class="list-group">
+        <ul class="list-group active">
             <li class="list-group-item">
-                <a href="#">Link 1</a>
+                <a href="#">All Products</a>
             </li>
             <li class="list-group-item">
-                <a href="#">Link 2</a>
+                <a href="#">Newest Products</a>
             </li>
             <li class="list-group-item">
-                <a href="#">Link 3</a>
+                <a href="#">My cart</a>
             </li>
             <li class="list-group-item">
-                <a href="#">Link 4</a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">Link 5</a>
+                <a href="#">Profile</a>
             </li>
             <li class="list-group-item logout">
-                <a href="#">Log out <span><i class="fa-solid fa-right-from-bracket"></i></span></a>
+                <a href="logout.php">Log out <span><i class="fa-solid fa-right-from-bracket"></i></span></a>
             </li>
             
         </ul>
