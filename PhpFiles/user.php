@@ -25,6 +25,8 @@ if(isset($_POST['search'])){
     $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
     $stmt->execute();
     $result = $stmt->fetchAll();
+    // Hide pagination links
+    $hidePagination = true;
 } else {
     $sql = "SELECT * FROM products LIMIT :limit OFFSET :offset";
     $stmt = $con->prepare($sql);
@@ -32,6 +34,8 @@ if(isset($_POST['search'])){
     $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
     $stmt->execute();
     $result = $stmt->fetchAll();
+    // Show pagination links
+    $hidePagination = false;
 }
 
 $total_pages = ceil($con->query("SELECT COUNT(*) FROM products")->fetchColumn() / $limit);
@@ -116,6 +120,7 @@ $total_pages = ceil($con->query("SELECT COUNT(*) FROM products")->fetchColumn() 
                 ?>
             </div>
         </div>
+        <?php if(!$hidePagination): ?>
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center mt-4">
                 <?php for($i = 1; $i <= $total_pages; $i++): ?>
@@ -125,6 +130,7 @@ $total_pages = ceil($con->query("SELECT COUNT(*) FROM products")->fetchColumn() 
                 <?php endfor; ?>
             </ul>
         </nav>
+        <?php endif; ?>
     </div>
 
     <!-- JavaScript libraries -->
