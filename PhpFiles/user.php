@@ -74,7 +74,7 @@ $total_pages = ceil($con->query("SELECT COUNT(*) FROM products")->fetchColumn() 
                 <a href="./neweistProducts.php">Newest Products</a>
             </li>
             <li class="list-group-item">
-                <a href="#">My cart</a>
+                <a href="cart.php">My cart</a>
             </li>
             <li class="list-group-item">
                 <a href="profile.php">Profile</a>

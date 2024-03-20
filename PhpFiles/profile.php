@@ -143,7 +143,7 @@ else{
                 <a href="./neweistProducts.php">Newest Products</a>
             </li>
             <li class="list-group-item">
-                <a href="#">My cart</a>
+                <a href="./cart.php">My cart</a>
             </li>
             <li class="list-group-item activeN">
                 <a href="profile.php" >Profile</a>

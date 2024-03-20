@@ -61,7 +61,7 @@ if (isset($_POST['login'])) {
                         <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                     </div>
                 </div>
-                <div class="mt-4 mb-4">
+                <div  class="mt-4 mb-4">
                     <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
